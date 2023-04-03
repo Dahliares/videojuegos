@@ -12,11 +12,13 @@ public class ServicioVideojuego{
     @Autowired
     private IVideojuegoRepositorio videojuegoRepositorio;
 
-    public List<Videojuego> listAll(){
+    public List<Videojuego> listAll(String clave) {
+        if (clave != null) {
+            return videojuegoRepositorio.findAll(clave);
+        }
+        return videojuegoRepositorio.findAll();
 
-        return (List<Videojuego>) videojuegoRepositorio.findAll();
     }
-
     public void save(Videojuego videojuego){
 
         videojuegoRepositorio.save(videojuego);

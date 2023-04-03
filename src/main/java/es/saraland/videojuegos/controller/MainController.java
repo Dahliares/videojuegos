@@ -3,6 +3,7 @@ package es.saraland.videojuegos.controller;
 import es.saraland.videojuegos.entities.Videojuego;
 import es.saraland.videojuegos.service.ServicioVideojuego;
 import org.springframework.beans.factory.annotation.*;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
@@ -18,10 +19,10 @@ public class MainController {
     private ServicioVideojuego servicioVideojuego;
 
     @GetMapping(path = {"/","index"})
-        public String index(Model modelo){
+        public String index(Model modelo, @Param("clave") String clave){
 
-        List<Videojuego> listaVideojuegos = servicioVideojuego.listAll();
-
+        List<Videojuego> listaVideojuegos = servicioVideojuego.listAll(clave);
+        modelo.addAttribute("clave",clave);
         modelo.addAttribute("listaVideojuegos",listaVideojuegos);
         return "index";
         }

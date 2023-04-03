@@ -8,10 +8,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 public interface IVideojuegoRepositorio extends JpaRepository<Videojuego, Long>{
 
-    //@Query("SELECT j FROM juegos j WHERE j.nombre LIKE %?1%")
-    //public List<Videojuego> fi
+
+    @Query("SELECT j FROM Videojuego j WHERE j.nombre LIKE %?1%")  //videojuego es entity no tabla
+    public List<Videojuego> findAll(String clave);
 
 }

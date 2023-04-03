@@ -17,10 +17,22 @@
 <h1>Lista de juegos</h1>
 
 
-<div class="container">
+<div class="container text-center">
+    <form class="d-flex flex-row align-items-center flex-wrap" th:action="@{/}">
+        <div class="form-group mb-2">
+            <label>Filtrar:</label>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" name="clave" class="form-control" id="clave" th:value="${clave}"/>
+        </div>
+        <input type="submit" class="btn btn-primary mb-2"  th:value="Buscar"/>
+        &nbsp;&nbsp;
+        <input type="button" onclick="limpiar()" class="btn btn-secondary mb-2"  th:value="Limpiar"/>
+
+    </form>
     <div class="row">
         <div class="col-lg-10 mt-5 mb-5">
-            <table id="tabla" class="table" style="width: 100%">
+            <table id="tabla" class="table table-striped" style="width: 100%">
                 <thead>
                 <tr>
                     <th>Id</th>
@@ -61,6 +73,12 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function limpiar(){
+        window.location="/";
+    }
+</script>
 
 </body>
 </html>

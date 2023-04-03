@@ -1,0 +1,26 @@
+img{
+
+    height: 70px;
+    width: 100px;
+
+}
+
+#titulo{
+
+
+    background-image: url(../../img/fondo.jpg);
+
+}
+
+body{
+
+
+    background-image: url(../../img/fondomando.jpg);
+
+}
+
+table{
+
+    background: aliceblue;
+    border-radius: 20px ;
+}

@@ -48,7 +48,7 @@ public class MainController {
     @GetMapping("/update/{id}")
     public ModelAndView update(@PathVariable(name="id") Long id){
     ModelAndView modelo = new ModelAndView("/update");
-        Videojuego juego = servicioVideojuego.get(id);
+        Videojuego juego = servicioVideojuego.getJuego(id);
 
         modelo.addObject("juego",juego);
 
@@ -62,6 +62,16 @@ public class MainController {
 
 
         return "redirect:/";
+    }
+
+    @GetMapping("/info/{id}")
+    public ModelAndView info(@PathVariable(name="id") Long id){
+        ModelAndView modelo = new ModelAndView("/info");
+        Videojuego juego = servicioVideojuego.getJuego(id);
+
+        modelo.addObject("juego",juego);
+
+        return modelo;
     }
 }
 

@@ -24,11 +24,12 @@ public class ServicioVideojuego{
         videojuegoRepositorio.save(videojuego);
     }
 
-    public Videojuego get(Long id){
+    public Videojuego getJuego(Long id){
         return videojuegoRepositorio.findById(id).get();
     }
 
     public void delete(Long id){
+
         videojuegoRepositorio.deleteById(id);
 
     }

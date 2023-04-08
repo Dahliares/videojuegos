@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Index</title>
     <link href="/css/main.css" rel="stylesheet">
+    <!-- Fontawesome iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href=" https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <!-- cdn JQuery js -->
+    <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
     <!-- boootstrap css -->
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'rel='stylesheet'
           integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossOrigin='anonymous'>
@@ -40,21 +47,24 @@
         <input type="button" onclick="limpiar()" class="btn btn-secondary mb-2"  th:value="Limpiar"/>
 
     </form>
-    <div class="row">
-        <div class="col-sm-12 mt-5 mb-5">
-            <table id="tabla" class="table table-striped" style="width: 100%">
+</div>
+    <div id="div-tabla"class="container-fluid">
+            <table id="tabla" class="table table-striped order-column" style="width: 100%">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Consola</th>
-                    <th>Tipo</th>
-                    <th>Saga</th>
-                    <th>Formato</th>
-                    <th>Idioma</th>
-                    <th>Estado</th>
-                    <th>Compañia</th>
-                    <th>Comentarios</th>
+                    <th>Id <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Nombre <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Consola <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Tipo <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Saga <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Formato <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Idioma <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Estado <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Compañia <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th>Comentarios <i class="fa-solid fa-sort fa-xs"></i></th>
+                    <th class="text-center"><i class="fa-solid fa-circle-info"></i></th>
+                    <th class="text-center"><i class="fa-solid fa-pen-to-square"></i></th>
+                    <th class="text-center"><i class="fa-solid fa-trash-can"></i></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -70,23 +80,26 @@
                     <td th:text="${juego.compania}"></td>
                     <td th:text="${juego.comentarios}"></td>
                     <td>
-                        <a class="btn btn-success" th:href="@{'/info/' + ${juego.getId()}}">Detalles</a>
+                        <a class="btn btn-success" th:href="@{'/info/' + ${juego.getId()}}">
+                            <i class="fa-solid fa-circle-info"></i></a>
 
                     </td>
                     <td>
-                        <a class="btn btn-primary" th:href="@{'/update/' + ${juego.getId()}}">Editar</a>
+                        <a class="btn btn-primary" th:href="@{'/update/' + ${juego.getId()}}">
+                            <i class="fa-solid fa-pen-to-square"></i></a>
 
                     </td>
                     <td>
-                        <a class="btn btn-danger" th:href="@{'/delete/' + ${juego.getId()}}">Borrar</a>
+                        <a class="btn btn-danger" th:href="@{'/delete/' + ${juego.getId()}}">
+                            <i class="fa-solid fa-trash-can"></i></a>
 
                     </td>
 
                 </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
+
+
 </div>
 
 <script type="text/javascript">
@@ -95,6 +108,9 @@
     }
 </script>
 <script src="/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
 </body>
 </html>

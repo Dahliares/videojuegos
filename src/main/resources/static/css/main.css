@@ -1,4 +1,7 @@
-img{
+@import url('https://fonts.cdnfonts.com/css/fats-are-good');
+
+
+  img{
 
     height: 70px;
     width: 100px;
@@ -7,7 +10,7 @@ img{
 
 #titulo{
 
-
+    font-family: 'FATS ARE GOOD', sans-serif;
     background-image: url(../../img/fondo.jpg);
 
 }
@@ -15,12 +18,22 @@ img{
 body{
 
 
-    background-image: url(../../img/fondomando.jpg);
+   background-image: url(../../img/fondomando.jpg);
+    background: aqua;
 
 }
 
 table{
 
-    background: aliceblue;
-    border-radius: 20px ;
+
+}
+
+th:hover{
+    cursor: pointer;
+}
+
+#div-tabla{
+
+    padding-left: 100px;
+    padding-right: 100px;
 }

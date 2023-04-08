@@ -1,9 +1,10 @@
-window.onload= function (){
+
+
+    $(document).ready(function () {
+        $('#tabla').DataTable();
+    });
 
 
 
 
 
-
-
-}

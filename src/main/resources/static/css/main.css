@@ -8,26 +8,20 @@
 
 }
 
-#titulo{
+main{
 
-    font-family: 'FATS ARE GOOD', sans-serif;
-    /*background-image: url(../../img/fondomando.jpg);*/
-
+    margin-top: 100px;
 }
 
 body{
 
-
-  /* background-image: url(../../img/fondomando.jpg);*/
-    background-color: lightslategray;
-
+    background-color: lightgrey !important;
 }
 
 tbody{
-
-    background-color: lightblue;
-
+    background-color: aliceblue;
 }
+
 
 th:hover{
     cursor: pointer;
@@ -37,4 +31,5 @@ th:hover{
 
     padding-left: 100px;
     padding-right: 100px;
+
 }

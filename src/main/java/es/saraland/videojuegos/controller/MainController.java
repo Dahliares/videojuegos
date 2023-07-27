@@ -57,6 +57,7 @@ public class MainController {
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable(name="id") Long id){
+
         servicioVideojuego.delete(id);
 
 

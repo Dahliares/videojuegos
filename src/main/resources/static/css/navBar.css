@@ -1,0 +1,194 @@
+@import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
+
+.topheader {
+
+    /* ejex  ejey difuminado color */
+    box-shadow: 0 4px 5px cyan;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+}
+
+.topnav {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+
+    gap: 3px;
+
+
+}
+
+
+.logotype {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding-left: 20px;
+    color: slateblue;
+    font-weight: bold;
+    font-family: 'New Super Mario Font U', sans-serif;
+}
+
+.lang{
+
+    width: 30px;
+    padding: 0;
+
+    border-radius: 50%;
+
+}
+
+.selected-lang{
+    box-shadow: 0 3px 15px cyan;
+}
+
+/*MENU*/
+.menu {
+
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu li {
+    padding: 0 15px;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.menu a {
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.menu a::after {
+
+    content: "";
+    /* obligatorio*/
+    background-color: rgb(52, 210, 213);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+    opacity: 0.8;
+}
+
+.menu a:hover {
+    color: blueviolet;
+}
+
+
+.open-menu,
+.close-menu {
+
+    display: none;
+}
+
+
+
+
+@media (max-width: 990px) {
+
+    .menu {
+
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(113, 98, 213);
+        height: 100%;
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+
+    }
+
+    .menu li {
+        padding: 0;
+    }
+
+    .menu a {
+        color: aliceblue;
+        line-height: 70px;
+        font-size: 25px;
+
+
+    }
+
+    .open-menu,
+    .close-menu {
+
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    .close-menu {
+
+        align-self: flex-end;
+        padding: 20px 15px;
+    }
+
+    .menu_opened {
+
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .open-menu:focus:not(:focus-visible),
+    .close-menu:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .menu a::after {
+        content: none;
+
+    }
+
+    .menu a:hover,
+    .menu a.selected {
+        color: aqua;
+    }
+
+}

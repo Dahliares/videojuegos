@@ -1,20 +1,23 @@
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid text-center">
-    <a class="navbar-brand" href="#">Biblioteca de videjuegos</a>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/add">Agregar juego</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+  <header class="topheader" th:fragment="navbar">
+
+    <nav class="topnav">
+      <div class="logo">
+        <div class="logotype">
+          Mis Videojuegos
+        </div>
+      </div>
+      <button class="open-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul class="menu">
+        <button class="close-menu">
+          <i class="fa-regular fa-circle-xmark fa-xl" style="color: #fafafa;"></i>
+        </button>
+        <li><a href="#">Añadir juego</a></li>
+        <li><a href="#">Sobre mi</a></li>
+
 
       </ul>
-    </div>
-  </div>
-</nav>
+    </nav>
+  </header>

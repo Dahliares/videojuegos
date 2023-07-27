@@ -11,20 +11,21 @@
 #titulo{
 
     font-family: 'FATS ARE GOOD', sans-serif;
-    background-image: url(../../img/fondo.jpg);
+    /*background-image: url(../../img/fondomando.jpg);*/
 
 }
 
 body{
 
 
-   background-image: url(../../img/fondomando.jpg);
-    background: aqua;
+  /* background-image: url(../../img/fondomando.jpg);*/
+    background-color: lightslategray;
 
 }
 
-table{
+tbody{
 
+    background-color: lightblue;
 
 }
 

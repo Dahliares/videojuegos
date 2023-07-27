@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@Table(name="juegos")
+@Table(name="videojuegos")
 public class Videojuego implements Serializable {
 
     @Id
@@ -39,6 +39,8 @@ public class Videojuego implements Serializable {
     @Column(length = 100)
     private String comentarios;
 
+    @Column(length = 255)
+    private String img;
 
 
 

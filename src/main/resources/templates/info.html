@@ -58,7 +58,7 @@
     </tr>
     <tr>
       <td>Imagen:</td>
-      <td th:text="${juego.getImg}"></td>
+      <td th:text="${juego.img}"></td>
     </tr>
 
 
@@ -85,6 +85,6 @@
   </div>
 </div>
 </main>
-
+<nav th:replace="fragments/navbar.html :: footer"/>
 </body>
 </html>

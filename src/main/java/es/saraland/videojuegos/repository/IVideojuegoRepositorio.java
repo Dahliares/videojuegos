@@ -12,7 +12,10 @@ import java.util.List;
 public interface IVideojuegoRepositorio extends JpaRepository<Videojuego, Long>{
 
 
-    @Query("SELECT j FROM Videojuego j WHERE j.nombre LIKE %?1%")  //videojuego es entity no tabla
-    public List<Videojuego> findAll(String clave);
+    @Query("SELECT j FROM Videojuego j WHERE j.consola LIKE %?1%")  //videojuego es entity no tabla
+    public List<Videojuego> findAll(String consola);
+
+
+
 
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/fats-are-good');
 
 
-  img{
+img{
 
     height: 70px;
     width: 100px;
@@ -11,15 +11,40 @@
 main{
 
     margin-top: 100px;
+    min-height: 100vh;
 }
+
+
+
 
 body{
 
-    background-color: lightgrey !important;
+    background-color: steelblue !important;
 }
 
 tbody{
-    background-color: aliceblue;
+    background-color: lightskyblue;
+    font-size: 14px;
+
+
+}
+
+thead{
+    font-size: 14px;
+    color: white;
+    background-color: midnightblue;
+
+}
+
+td .btn{
+
+    width: 15px;
+    height: 15px;
+}
+
+.fa-solid{
+
+    width: 100%;
 }
 
 
@@ -32,4 +57,10 @@ th:hover{
     padding-left: 100px;
     padding-right: 100px;
 
+}
+
+/*BOTONES CONSOLA */
+
+.active{
+    border: solid 5px cyan;
 }

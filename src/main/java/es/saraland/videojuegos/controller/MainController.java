@@ -19,10 +19,10 @@ public class MainController {
     private ServicioVideojuego servicioVideojuego;
 
     @GetMapping(path = {"/","index"})
-        public String index(Model modelo, @Param("clave") String clave){
+        public String index(Model modelo, @Param("consola") String consola){
 
-        List<Videojuego> listaVideojuegos = servicioVideojuego.listAll(clave);
-        modelo.addAttribute("clave",clave);
+        List<Videojuego> listaVideojuegos = servicioVideojuego.listAll(consola);
+        modelo.addAttribute("consola",consola);
         modelo.addAttribute("listaVideojuegos",listaVideojuegos);
         return "index";
         }
@@ -40,6 +40,8 @@ public class MainController {
 
     @PostMapping("/save")
     public String save(@ModelAttribute("juego") Videojuego juego){
+
+        System.out.println(juego.getImg());
 
         servicioVideojuego.save(juego);
         return "redirect:/";

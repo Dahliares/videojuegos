@@ -30,10 +30,10 @@
 <main>
 <div class="container mt-5 mb-5">
     <div class="row d-inline flex-row flex-wrap align-items-center">
-        <a href="#"><img src="/img/logo-ps1.JPG" alt="ps1"/></a>
-        <a href="#"><img src="/img/logo-ps2.JPG" alt="ps2"/></a>
-        <a href="#"><img src="/img/logo-ps3.JPG" alt="ps3"/></a>
-        <a href="#"><img src="/img/logo-ps4.JPG" alt="ps4"/></a>
+        <a href="/?consola=PS1"><img class="boton-consola"src="/img/logo-ps1.JPG" alt="ps1"/></a>
+        <a href="/?consola=ps2"><img class="boton-consola" src="/img/logo-ps2.JPG" alt="ps2"/></a>
+        <a href="/?consola=PS3"><img class="boton-consola"src="/img/logo-ps3.JPG" alt="ps3"/></a>
+        <a href="#"><img class="boton-consola"src="/img/logo-ps4.JPG" alt="ps4"/></a>
     </div>
 </div>
 
@@ -85,18 +85,18 @@
                     <td th:text="${juego.compania}"></td>
                     <td th:text="${juego.comentarios}"></td>
                     <td>
-                        <a class="btn btn-success" th:href="@{'/info/' + ${juego.getId()}}">
-                            <i class="fa-solid fa-circle-info"></i></a>
+                        <a  th:href="@{'/info/' + ${juego.getId()}}">
+                            <i class="fa-solid fa-circle-info" style="color: teal"></i></a>
 
                     </td>
                     <td>
-                        <a class="btn btn-primary" th:href="@{'/update/' + ${juego.getId()}}">
+                        <a  th:href="@{'/update/' + ${juego.getId()}}">
                             <i class="fa-solid fa-pen-to-square"></i></a>
 
                     </td>
                     <td>
-                        <a class="btn btn-danger" th:href="@{'/delete/' + ${juego.getId()}}">
-                            <i class="fa-solid fa-trash-can"></i></a>
+                        <a  th:href="@{'/delete/' + ${juego.getId()}}">
+                            <i class="fa-solid fa-trash-can" style="color: red"></i></a>
 
                     </td>
 
@@ -107,6 +107,7 @@
 
 </div>
 </main>
+<nav th:replace="fragments/navbar.html :: footer"/>
 <script type="text/javascript">
     function limpiar(){
         window.location="/";

@@ -59,7 +59,7 @@
                         <input class="form-control" type="text" name="comentarios" th:field="*{comentarios}">
                     </div>
                     <div class="form-group">
-                        <label for="imagen">Imagen:</label>
+                        <label for="file">Imagen:</label>
                         <input class="form-control" type="file" name="file" th:field="*{img}">
                     </div>
                     <div class="=box-footer">
@@ -78,5 +78,6 @@
     </div>
 </div>
 </main>
+<nav th:replace="fragments/navbar.html :: footer"/>
 </body>
 </html>

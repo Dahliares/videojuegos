@@ -41,9 +41,17 @@
     justify-content: center;
     font-size: 40px;
     padding-left: 20px;
-    color: aliceblue;
+
     font-weight: bold;
     font-family: 'New Super Mario Font U', sans-serif;
+
+
+}
+
+.logotype a{
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
 }
 
 
@@ -178,4 +186,16 @@
         color: aqua;
     }
 
+}
+
+footer{
+
+    background-color: black;
+    color: cyan;
+    height: 70px;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 70px;
+    font-size: 20px;
+    box-shadow:  10px 0 10px cyan;
 }

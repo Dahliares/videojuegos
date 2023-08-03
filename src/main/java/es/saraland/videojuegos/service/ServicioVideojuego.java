@@ -12,9 +12,9 @@ public class ServicioVideojuego{
     @Autowired
     private IVideojuegoRepositorio videojuegoRepositorio;
 
-    public List<Videojuego> listAll(String clave) {
-        if (clave != null) {
-            return videojuegoRepositorio.findAll(clave);
+    public List<Videojuego> listAll(String consola) {
+        if (consola != null) {
+            return videojuegoRepositorio.findAll(consola);
         }
         return videojuegoRepositorio.findAll();
 
@@ -33,5 +33,7 @@ public class ServicioVideojuego{
         videojuegoRepositorio.deleteById(id);
 
     }
+
+
 
 }
